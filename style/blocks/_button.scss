@@ -1,0 +1,26 @@
+.button {
+    @include flex-center;
+    @include reset-button;
+
+    height: var(--button-height);
+    color: var(--color-light);
+    border-radius: var(--border-radius);
+    background-color: var(--color-blue-second);
+    padding-inline: 40px;
+    cursor: pointer;
+
+    @include hover {
+        color: var(--color-dark);
+        background-color: var(--color-blue-light);
+    }
+
+    &--yellow {
+        color: var(--color-dark);    
+        background-color: var(--color-yellow);
+
+        @include hover {
+            color: var(--color-light);
+            background-color: var(--color-blue-light);
+        }
+    }
+}
