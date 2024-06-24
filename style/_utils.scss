@@ -43,3 +43,12 @@
         display: none !important;
     }
 }
+
+.bg-blue {
+    background-color: var(--color-blue);
+    color: var(--color-light);
+}
+
+.center {
+    text-align: center;
+}

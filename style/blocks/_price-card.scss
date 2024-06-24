@@ -1,0 +1,74 @@
+.price-card {
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: start;
+    justify-content: space-between;
+    padding: 40px 44px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    transition-duration: var(--transition-duration);
+
+    @include tablet {
+        min-width: 377px;
+        width: 100%;
+    }
+
+    @include hover {
+        .button {
+            border: none;
+            background-color: var(--color-blue-light);
+            
+            @include hover {
+                background-color: var(--color-yellow);
+            }
+        }
+    }
+
+    &--big {
+        @include desktop-above {
+            @include abs-center;
+
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            width: 460px;
+            height: 740px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    &__title {
+        font-size: 24px;
+    }
+
+    &__price {
+        font-size: 36px;
+    }
+
+    &__p {
+        font-size: 18px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 28px;
+        font-size: 16px;
+
+        @include tablet {
+            
+        }
+    }
+    
+    &__item {
+        display: flex;
+        column-gap: 19px;
+    }
+}

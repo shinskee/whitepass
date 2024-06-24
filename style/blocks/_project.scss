@@ -1,0 +1,23 @@
+.project {
+
+    @include tablet {
+        row-gap: 60px;
+    }
+
+    &__image {
+        @include desktop {
+            width: 527px;
+            height: 328px;
+        }
+
+        @include tablet {
+            width: 551px;
+            height: 367px;
+        }
+
+        @include mobile {
+            width: 286px;
+            height: 177px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.hero {
+    &__image {
+        @include tablet {
+            width: 551px;
+            height: 267px;
+        }
+
+        @include mobile {
+            width: 286px;
+            height: 191px;
+        }
+    }
+}

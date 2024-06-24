@@ -1,0 +1,32 @@
+.work {
+    margin-top: 100px;
+    flex-direction: row-reverse;
+    column-gap: 160px;
+
+    @include desktop {
+        column-gap: 50px;
+    }
+
+    @include tablet {
+        flex-direction: column;
+        row-gap: 100px;
+        align-items: center;
+    }
+    
+    &__image {
+        @include desktop {
+            width: 528px;
+            height: 491px;
+        }
+
+        @include tablet {
+            width: 454px;
+            height: 422px;
+        }
+
+        @include mobile {
+            width: 279px;
+            height: 259px;
+        }
+    }
+}

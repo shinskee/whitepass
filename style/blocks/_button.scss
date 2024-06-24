@@ -23,4 +23,16 @@
             background-color: var(--color-blue-light);
         }
     }
+
+    &--price-card {
+        color: var(--color-dark);    
+        background-color: var(--color-light);
+        border: var(--border);
+        border-radius: var(--border-radius);
+
+        @include hover {
+            color: var(--color-dark);
+            background-color: var(--color-yellow);
+        }
+    }
 }
