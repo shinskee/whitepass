@@ -49,6 +49,18 @@
     color: var(--color-light);
 }
 
+.bg-light {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
 .center {
+    align-items: center;
     text-align: center;
+}
+
+.marker {
+    background-image: url(/images/marker.svg);
+    background-repeat: no-repeat;
+    background-position-y: 38%;
 }

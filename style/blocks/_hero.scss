@@ -1,4 +1,7 @@
 .hero {
+    background-image: url(../../images/Element.svg);
+    background-repeat: no-repeat;
+
     &__image {
         @include tablet {
             width: 551px;

@@ -263,8 +263,22 @@ svg * {
   color: var(--color-light);
 }
 
+.bg-light {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
 .center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
+}
+
+.marker {
+  background-image: url(/images/marker.svg);
+  background-repeat: no-repeat;
+  background-position-y: 38%;
 }
 
 body {
@@ -625,6 +639,10 @@ h4, .h4 {
   }
 }
 
+.hero {
+  background-image: url(../../images/Element.svg);
+  background-repeat: no-repeat;
+}
 @media (max-width: 1023px) {
   .hero__image {
     width: 551px;
@@ -638,6 +656,11 @@ h4, .h4 {
   }
 }
 
+.project {
+  background-image: url(../../images/BACKGROUND.svg);
+  background-repeat: no-repeat;
+  background-position-y: 30%;
+}
 @media (max-width: 1023px) {
   .project {
     row-gap: 60px;
@@ -872,5 +895,18 @@ h4, .h4 {
   -webkit-column-gap: 19px;
      -moz-column-gap: 19px;
           column-gap: 19px;
+}
+
+.your-work .section__header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.reviews .section__header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

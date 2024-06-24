@@ -1,4 +1,7 @@
 .project {
+    background-image: url(../../images/BACKGROUND.svg);
+    background-repeat: no-repeat;
+    background-position-y: 30%;
 
     @include tablet {
         row-gap: 60px;
