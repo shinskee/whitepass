@@ -1,0 +1,28 @@
+.review-card {
+    // max-width: 471px;
+    // max-height: 498px;
+   padding: 60px 40px;
+   border-radius: var(--border-radius);
+   background-color: var(--color-blue-second); 
+   
+   &__header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+   }
+
+   &__footer {
+    display: flex;
+    column-gap: 42px;
+    padding-top: 60px;
+    margin-top: 40px;
+    border-top: 1px solid black;
+    }
+
+
+   &__person {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+   }
+}

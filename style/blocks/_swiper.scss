@@ -1,0 +1,11 @@
+.swiper {
+    padding-bottom: 24px;
+
+    &-wrapper {
+        padding-bottom: 60px;
+    }
+
+    @include tablet {
+        width: 100%;
+    }
+  }
