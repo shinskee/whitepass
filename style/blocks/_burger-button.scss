@@ -1,57 +1,59 @@
 .burger-button {
     @include reset-button;
-    @include square(63px);
+    @include square(48px);
 
+    // background-color: gray;
     position: relative;
-    border-radius: var(--border-radius-small);
     cursor: pointer;
 
-    @include hover {
-        background-color: var(--color-blue-light);
+    @include mobile-s {
+        @include square(40px);
     }
-
-    &::after {
+    
+    span {
         @include abs-center;
 
-        content: '';
-        width: 50%;
-        height: 3px;
-        background-color: var(--color-light);
-        border-radius: 5px;
-        box-shadow: 0 -8px, 0 8px;
-        color: var(--color-light);
-    }
-
-    .active {
-        @include reset-button;
-    @include square(63px);
-
-    position: relative;
-    border-radius: var(--border-radius-small);
-    cursor: pointer;
-
-    @include hover {
-        background-color: var(--color-blue-light);
-    }
-
-    &::after,
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 9px;
-        width: 70%;
         height: 2px;
-        background-color: var(--color-light);
-        border-radius: 5px;
-    }
+        width: 60%;
+        background-color: white;
+        border-radius: 2px;
+        transition-duration: 0.2s;
 
-    &::after {
-        rotate: -45deg;
-    }
+        &::after,
+        &::before {
+            content: '';
 
-    &::before {
-        rotate: 45deg;
-    }
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: white;
+            translate: -50%;
+            border-radius: 2px;
+            transition-duration: .2s;
+        }
+        
+        &::after {
+            top: 8px;
+        }
+
+        &::before {
+            bottom: 8px;
+        }
+
     }
 }
+.burger-button.active {
+    span {
+        background-color: transparent;
+
+        &::after {
+            rotate: 45deg;
+            top: auto;
+        }
+    
+        &::before {
+            rotate: -45deg;
+            bottom: auto;
+        }
+    }
+    }

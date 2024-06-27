@@ -291,6 +291,9 @@ body {
   color: var(--color-dark);
   background-color: var(--color-light);
 }
+body.lock {
+  overflow: hidden;
+}
 
 a,
 button,
@@ -416,6 +419,13 @@ h4, .h4 {
      -moz-column-gap: 32px;
           column-gap: 32px;
 }
+@media (max-width: 767px) {
+  .header__inner {
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+}
 .header__menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -443,6 +453,22 @@ h4, .h4 {
 @media (hover: none) {
   .header__menu-link:active {
     color: var(--color-yellow);
+  }
+}
+@media (max-width: 1280px) {
+  .header__menu {
+    -webkit-transform: translatex(100%);
+            transform: translatex(100%);
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(205, 205, 255, 0.68);
+  }
+  .header__menu.active {
+    -webkit-transform: translatex(0);
+            transform: translatex(0);
   }
 }
 .header__logo {
@@ -554,35 +580,57 @@ h4, .h4 {
   padding: 0;
   background-color: transparent;
   border: none;
-  width: 63px;
+  width: 48px;
   aspect-ratio: 1;
   position: relative;
-  border-radius: var(--border-radius-small);
   cursor: pointer;
 }
-@media (hover: hover) {
-  .burger-button:hover {
-    background-color: var(--color-blue-light);
+@media (max-width: 480px) {
+  .burger-button {
+    width: 40px;
+    aspect-ratio: 1;
   }
 }
-@media (hover: none) {
-  .burger-button:active {
-    background-color: var(--color-blue-light);
-  }
-}
-.burger-button::after {
+.burger-button span {
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+  height: 2px;
+  width: 60%;
+  background-color: white;
+  border-radius: 2px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.burger-button span::after, .burger-button span::before {
   content: "";
-  width: 50%;
-  height: 3px;
-  background-color: var(--color-light);
-  border-radius: 5px;
-  -webkit-box-shadow: 0 -8px, 0 8px;
-          box-shadow: 0 -8px, 0 8px;
-  color: var(--color-light);
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  translate: -50%;
+  border-radius: 2px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.burger-button span::after {
+  top: 8px;
+}
+.burger-button span::before {
+  bottom: 8px;
+}
+
+.burger-button.active span {
+  background-color: transparent;
+}
+.burger-button.active span::after {
+  rotate: 45deg;
+  top: auto;
+}
+.burger-button.active span::before {
+  rotate: -45deg;
+  bottom: auto;
 }
 
 .section {

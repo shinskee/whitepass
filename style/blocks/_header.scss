@@ -11,6 +11,10 @@
         justify-content: space-between;
         align-items: center;
         column-gap: 32px;
+
+        @include mobile {
+            column-gap: 10px;
+        }
     }
 
     &__menu {
@@ -28,6 +32,21 @@
 
             @include hover {
                 color: var(--color-yellow);
+            }
+        }
+
+        @include desktop {
+            transform: translatex(100%);
+            position: fixed;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(205, 205, 255, 0.68);
+            // transition-duration: 0.3s;
+
+            &.active {
+                transform: translatex(0);
             }
         }
     }
