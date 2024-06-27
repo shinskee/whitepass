@@ -21,4 +21,37 @@
         box-shadow: 0 -8px, 0 8px;
         color: var(--color-light);
     }
+
+    .active {
+        @include reset-button;
+    @include square(63px);
+
+    position: relative;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+
+    @include hover {
+        background-color: var(--color-blue-light);
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 9px;
+        width: 70%;
+        height: 2px;
+        background-color: var(--color-light);
+        border-radius: 5px;
+    }
+
+    &::after {
+        rotate: -45deg;
+    }
+
+    &::before {
+        rotate: 45deg;
+    }
+    }
 }

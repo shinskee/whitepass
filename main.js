@@ -1,3 +1,4 @@
+// Swiper
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -15,3 +16,18 @@ const swiper = new Swiper('.swiper', {
       clickable: true,
     },     
   });
+
+// Mobile-menu
+const mobileMenu = document.querySelector('.header__menu')
+const buttonBurger = document.querySelector('.burger-button')
+
+buttonBurger.addEventListener('click', () => {
+  if (buttonBurger.classList.contains('active')) {
+    buttonBurger.classList.remove('active')
+    mobileMenu.classList.remove('active')
+  }
+  else {
+    buttonBurger.classList.add('active')
+    mobileMenu.classList.add('active')
+  }
+})
