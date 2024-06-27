@@ -20,7 +20,7 @@ const swiper = new Swiper('.swiper', {
 // Mobile-menu
 const mobileMenu = document.querySelector('.header__menu')
 const buttonBurger = document.querySelector('.burger-button')
-const bodyEl = document.body;
+const bodyEl = document.body
 
 buttonBurger.addEventListener('click', () => {
   if (buttonBurger.classList.contains('active')) {
@@ -31,6 +31,6 @@ buttonBurger.addEventListener('click', () => {
   else {
     buttonBurger.classList.add('active')
     mobileMenu.classList.add('active')
-    bodyEl.classList.remove('lock');
+    bodyEl.classList.add('lock')
   }
 })
